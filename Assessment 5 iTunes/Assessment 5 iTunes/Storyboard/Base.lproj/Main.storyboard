@@ -63,7 +63,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="albumCoverImageView" destination="IuH-0L-dZc" id="RpX-B8-4oK"/>
-                                    <outlet property="albumName" destination="33j-tw-Rnn" id="WdR-J6-JWf"/>
+                                    <outlet property="albumNameLabel" destination="33j-tw-Rnn" id="aVJ-sQ-XHg"/>
                                     <outlet property="songsInAlbumLabel" destination="L8l-b8-uvo" id="dhQ-E6-dIK"/>
                                 </connections>
                             </tableViewCell>
