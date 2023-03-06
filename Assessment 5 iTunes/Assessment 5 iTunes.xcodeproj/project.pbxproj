@@ -12,6 +12,7 @@
 		AF561C4E29B5A4A5000EF400 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF561C4C29B5A4A5000EF400 /* Main.storyboard */; };
 		AF561C5029B5A4A6000EF400 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF561C4F29B5A4A6000EF400 /* Assets.xcassets */; };
 		AF561C5329B5A4A6000EF400 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF561C5129B5A4A6000EF400 /* LaunchScreen.storyboard */; };
+		AF561C5D29B5A9E1000EF400 /* AlbumSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF561C5C29B5A9E1000EF400 /* AlbumSearchTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		AF561C4F29B5A4A6000EF400 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF561C5229B5A4A6000EF400 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF561C5429B5A4A6000EF400 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF561C5C29B5A9E1000EF400 /* AlbumSearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumSearchTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				AF561C5A29B5A4D9000EF400 /* Supporting Files */,
 				AF561C5B29B5A4E4000EF400 /* Storyboard */,
+				AF561C5E29B5A9E4000EF400 /* Controllers */,
 			);
 			path = "Assessment 5 iTunes";
 			sourceTree = "<group>";
@@ -78,6 +81,22 @@
 				AF561C5129B5A4A6000EF400 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		AF561C5E29B5A9E4000EF400 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AF561C5F29B5A9E9000EF400 /* View Controllers */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		AF561C5F29B5A9E9000EF400 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AF561C5C29B5A9E1000EF400 /* AlbumSearchTableViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF561C4729B5A4A5000EF400 /* AppDelegate.swift in Sources */,
+				AF561C5D29B5A9E1000EF400 /* AlbumSearchTableViewController.swift in Sources */,
 				AF561C4929B5A4A5000EF400 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,7 +320,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Assessment 5 iTunes/Info.plist";
+				INFOPLIST_FILE = "Assessment 5 iTunes/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -327,7 +347,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Assessment 5 iTunes/Info.plist";
+				INFOPLIST_FILE = "Assessment 5 iTunes/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
