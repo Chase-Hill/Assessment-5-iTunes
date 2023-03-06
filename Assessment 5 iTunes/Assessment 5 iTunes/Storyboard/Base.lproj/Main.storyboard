@@ -24,7 +24,7 @@
                             </connections>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="albumCell" rowHeight="122" id="uXr-eI-7DL">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="albumCell" rowHeight="122" id="uXr-eI-7DL" customClass="AlbumTableViewCell" customModule="Assessment_5_iTunes" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="94" width="393" height="122"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uXr-eI-7DL" id="Zbk-je-9MO">
@@ -61,6 +61,11 @@
                                         <constraint firstItem="33j-tw-Rnn" firstAttribute="centerY" secondItem="IuH-0L-dZc" secondAttribute="centerY" id="cFu-Ee-OZy"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="albumCoverImageView" destination="IuH-0L-dZc" id="RpX-B8-4oK"/>
+                                    <outlet property="albumName" destination="33j-tw-Rnn" id="WdR-J6-JWf"/>
+                                    <outlet property="songsInAlbumLabel" destination="L8l-b8-uvo" id="dhQ-E6-dIK"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

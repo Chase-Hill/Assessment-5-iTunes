@@ -5,7 +5,7 @@
 //  Created by Chase on 3/6/23.
 //
 
-import Foundation
+import UIKit
 
 struct AlbumService {
     
@@ -39,6 +39,27 @@ struct AlbumService {
                 
                 completion(.failure(.unableToDecode)) ; return
             }
+        } .resume()
+    }
+    
+    static func fetchAlbumCover(forAlbum album: Album, completion: @escaping (Result<UIImage, NetworkError>) -> Void) {
+        
+        guard let imageURL = URL(string: album.albumCover) else { completion(.failure(.invalidURL)) ; return }
+        print("Final Image URL: \(imageURL)")
+        
+        URLSession.shared.dataTask(with: imageURL) { data, response, error in
+            
+            if let error = error {
+                completion(.failure(.thrownError(error))) ; return
+            }
+            
+            if let response = response as? HTTPURLResponse {
+                print("Image Status Code: \(response.statusCode)")
+            }
+            
+            guard let data = data else { completion(.failure(.noData)) ; return }
+            guard let cover = UIImage(data: data) else { completion(.failure(.unableToDecode)) ; return }
+            completion(.success(cover))
         } .resume()
     }
 }
