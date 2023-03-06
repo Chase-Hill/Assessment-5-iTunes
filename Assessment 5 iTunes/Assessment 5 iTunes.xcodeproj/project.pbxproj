@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		AF561C4729B5A4A5000EF400 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF561C4629B5A4A5000EF400 /* AppDelegate.swift */; };
 		AF561C4929B5A4A5000EF400 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF561C4829B5A4A5000EF400 /* SceneDelegate.swift */; };
-		AF561C4B29B5A4A5000EF400 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF561C4A29B5A4A5000EF400 /* ViewController.swift */; };
 		AF561C4E29B5A4A5000EF400 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF561C4C29B5A4A5000EF400 /* Main.storyboard */; };
 		AF561C5029B5A4A6000EF400 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF561C4F29B5A4A6000EF400 /* Assets.xcassets */; };
 		AF561C5329B5A4A6000EF400 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF561C5129B5A4A6000EF400 /* LaunchScreen.storyboard */; };
@@ -19,7 +18,6 @@
 		AF561C4329B5A4A5000EF400 /* Assessment 5 iTunes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Assessment 5 iTunes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF561C4629B5A4A5000EF400 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF561C4829B5A4A5000EF400 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AF561C4A29B5A4A5000EF400 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AF561C4D29B5A4A5000EF400 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AF561C4F29B5A4A6000EF400 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF561C5229B5A4A6000EF400 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,15 +54,30 @@
 		AF561C4529B5A4A5000EF400 /* Assessment 5 iTunes */ = {
 			isa = PBXGroup;
 			children = (
-				AF561C4629B5A4A5000EF400 /* AppDelegate.swift */,
-				AF561C4829B5A4A5000EF400 /* SceneDelegate.swift */,
-				AF561C4A29B5A4A5000EF400 /* ViewController.swift */,
-				AF561C4C29B5A4A5000EF400 /* Main.storyboard */,
-				AF561C4F29B5A4A6000EF400 /* Assets.xcassets */,
-				AF561C5129B5A4A6000EF400 /* LaunchScreen.storyboard */,
-				AF561C5429B5A4A6000EF400 /* Info.plist */,
+				AF561C5A29B5A4D9000EF400 /* Supporting Files */,
+				AF561C5B29B5A4E4000EF400 /* Storyboard */,
 			);
 			path = "Assessment 5 iTunes";
+			sourceTree = "<group>";
+		};
+		AF561C5A29B5A4D9000EF400 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AF561C4629B5A4A5000EF400 /* AppDelegate.swift */,
+				AF561C4829B5A4A5000EF400 /* SceneDelegate.swift */,
+				AF561C4F29B5A4A6000EF400 /* Assets.xcassets */,
+				AF561C5429B5A4A6000EF400 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AF561C5B29B5A4E4000EF400 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				AF561C4C29B5A4A5000EF400 /* Main.storyboard */,
+				AF561C5129B5A4A6000EF400 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +151,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF561C4B29B5A4A5000EF400 /* ViewController.swift in Sources */,
 				AF561C4729B5A4A5000EF400 /* AppDelegate.swift in Sources */,
 				AF561C4929B5A4A5000EF400 /* SceneDelegate.swift in Sources */,
 			);
