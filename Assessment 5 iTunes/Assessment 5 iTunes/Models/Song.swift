@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SongTopLevelDictionary: Decodable {
+struct SongTopLevel: Decodable {
     
     let results: [Song]
 }

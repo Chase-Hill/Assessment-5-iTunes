@@ -15,18 +15,18 @@ class AlbumSearchTableViewController: UITableViewController {
     }
 
     // MARK: - Properties
-    var albums: [Album]?
+    var albums: [Album] = []
     var albumTopLevel: AlbumTopLevel?
     
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return albums?.count ?? 0
+        return albums.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "albumCell", for: indexPath) as? AlbumTableViewCell else { return UITableViewCell() }
 
-        guard let album = albums?[indexPath.row] else { return UITableViewCell() }
+        let album = albums[indexPath.row]
         cell.fetchAlbums(for: album)
 
         return cell
@@ -34,8 +34,12 @@ class AlbumSearchTableViewController: UITableViewController {
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        
+        if segue.identifier == "toSongListVC" {
+            guard let indexPath = tableView.indexPathForSelectedRow,
+                  let destinationVC = segue.destination as? SongListTableViewController else { return }
+            let album = albums[indexPath.row]
+            destinationVC.album = album
+        }
     }
 }
 

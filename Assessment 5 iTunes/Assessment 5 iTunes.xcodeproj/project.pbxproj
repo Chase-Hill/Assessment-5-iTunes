@@ -19,6 +19,7 @@
 		AF561C6829B5B6D4000EF400 /* NetworkingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF561C6729B5B6D4000EF400 /* NetworkingController.swift */; };
 		AF561C6B29B5BA1D000EF400 /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF561C6A29B5BA1D000EF400 /* AlbumTableViewCell.swift */; };
 		AFDA41BF29B98A7F007AF208 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDA41BE29B98A7F007AF208 /* Song.swift */; };
+		AFDA41C129B99D18007AF208 /* SongListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDA41C029B99D18007AF208 /* SongListTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		AF561C6729B5B6D4000EF400 /* NetworkingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingController.swift; sourceTree = "<group>"; };
 		AF561C6A29B5BA1D000EF400 /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
 		AFDA41BE29B98A7F007AF208 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		AFDA41C029B99D18007AF208 /* SongListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongListTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				AF561C5C29B5A9E1000EF400 /* AlbumSearchTableViewController.swift */,
+				AFDA41C029B99D18007AF208 /* SongListTableViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFDA41C129B99D18007AF208 /* SongListTableViewController.swift in Sources */,
 				AFDA41BF29B98A7F007AF208 /* Song.swift in Sources */,
 				AF561C4729B5A4A5000EF400 /* AppDelegate.swift in Sources */,
 				AF561C5D29B5A9E1000EF400 /* AlbumSearchTableViewController.swift in Sources */,
