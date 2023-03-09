@@ -65,7 +65,7 @@ class AlbumService {
         } .resume()
     }
     
-    static func fetchSongsFromAlbum(fromAlbum album: Album, completion: @escaping (Result <SongTopLevel, NetworkError>) -> Void) {
+    static func fetchSongsFromAlbum(fromAlbum album: Album, completion: @escaping (Result <[Song], NetworkError>) -> Void) {
         guard let baseURL = URL(string: Constants.SongsURL.baseURL) else { completion(.failure(.invalidURL)) ; return }
         var urlComponents = URLComponents(url: baseURL, resolvingAgainstBaseURL: true)
         urlComponents?.path.append(contentsOf: Constants.SongsURL.searchPath)
@@ -91,7 +91,7 @@ class AlbumService {
             do {
                 
                 let songs = try JSONDecoder().decode(SongTopLevel.self, from: data)
-                completion(.success(songs))
+                completion(.success(songs.results))
             } catch {
                 
                 completion(.failure(.unableToDecode))

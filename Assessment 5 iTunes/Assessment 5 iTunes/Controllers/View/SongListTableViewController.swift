@@ -17,6 +17,7 @@ class SongListTableViewController: UITableViewController {
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateViews()
     }
 
     // MARK: - Properties
@@ -33,10 +34,24 @@ class SongListTableViewController: UITableViewController {
         
         AlbumService.fetchAlbumCover(forAlbum: album) { [weak self] result in
             switch result {
-            case .success(let album):
-                <#code#>
+            case .success(let albumCover):
+                DispatchQueue.main.async {
+                    self?.albumCoverImageView.image = albumCover
+                }
             case .failure(let error):
-                <#code#>
+                print(error.errorDescription ?? NetworkError.unknownError)
+            }
+        }
+        
+        AlbumService.fetchSongsFromAlbum(fromAlbum: album) { [weak self] result in
+            switch result {
+            case .success(let songs):
+                self?.songs = songs
+                DispatchQueue.main.async {
+                    self?.tableView.reloadData()
+                }
+            case .failure(let error):
+                print(error.errorDescription ?? NetworkError.unknownError)
             }
         }
     }
