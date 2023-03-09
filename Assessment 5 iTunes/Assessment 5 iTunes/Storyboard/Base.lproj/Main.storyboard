@@ -89,9 +89,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="D8Q-PZ-o0t">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oGV-kL-DQM">
+                                    <rect key="frame" x="154.66666666666666" y="8" width="84" height="84"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="oGV-kL-DQM" secondAttribute="height" multiplier="1:1" id="VlA-ou-HtS"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Album Name)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cbR-aH-jMY">
+                                    <rect key="frame" x="246.66666666666663" y="8" width="138.33333333333337" height="84"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Artist Name)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B8k-Xp-Mfx">
+                                    <rect key="frame" x="8" y="8" width="138.66666666666666" height="84"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="cbR-aH-jMY" secondAttribute="trailing" constant="8" id="2Tp-3N-3iZ"/>
+                                <constraint firstAttribute="bottom" secondItem="cbR-aH-jMY" secondAttribute="bottom" constant="8" id="4xM-3a-LeM"/>
+                                <constraint firstItem="cbR-aH-jMY" firstAttribute="leading" secondItem="oGV-kL-DQM" secondAttribute="trailing" constant="8" id="7Qa-Nt-1N5"/>
+                                <constraint firstItem="B8k-Xp-Mfx" firstAttribute="centerY" secondItem="D8Q-PZ-o0t" secondAttribute="centerY" id="96A-aj-SNG"/>
+                                <constraint firstItem="oGV-kL-DQM" firstAttribute="width" secondItem="D8Q-PZ-o0t" secondAttribute="width" multiplier="0.21374" id="FQ5-2d-pOs"/>
+                                <constraint firstAttribute="bottomMargin" secondItem="oGV-kL-DQM" secondAttribute="bottom" id="JCe-La-XSX"/>
+                                <constraint firstItem="B8k-Xp-Mfx" firstAttribute="top" secondItem="D8Q-PZ-o0t" secondAttribute="top" constant="8" id="V2w-pV-pmq"/>
+                                <constraint firstItem="oGV-kL-DQM" firstAttribute="top" secondItem="D8Q-PZ-o0t" secondAttribute="topMargin" id="YE4-rH-xPX"/>
+                                <constraint firstAttribute="bottom" secondItem="B8k-Xp-Mfx" secondAttribute="bottom" constant="8" id="bll-Km-oK8"/>
+                                <constraint firstItem="cbR-aH-jMY" firstAttribute="centerY" secondItem="D8Q-PZ-o0t" secondAttribute="centerY" id="bnh-Qg-YkG"/>
+                                <constraint firstItem="B8k-Xp-Mfx" firstAttribute="leading" secondItem="D8Q-PZ-o0t" secondAttribute="leading" constant="8" id="cXB-A1-iOV"/>
+                                <constraint firstItem="oGV-kL-DQM" firstAttribute="height" secondItem="D8Q-PZ-o0t" secondAttribute="height" multiplier="0.84" id="cvb-FA-bGp"/>
+                                <constraint firstItem="cbR-aH-jMY" firstAttribute="top" secondItem="D8Q-PZ-o0t" secondAttribute="top" constant="8" id="gbT-qi-3h3"/>
+                                <constraint firstItem="oGV-kL-DQM" firstAttribute="centerX" secondItem="D8Q-PZ-o0t" secondAttribute="centerX" id="k87-gI-Oty"/>
+                                <constraint firstItem="oGV-kL-DQM" firstAttribute="leading" secondItem="B8k-Xp-Mfx" secondAttribute="trailing" constant="8" id="tP4-8k-poU"/>
+                                <constraint firstItem="oGV-kL-DQM" firstAttribute="centerY" secondItem="D8Q-PZ-o0t" secondAttribute="centerY" id="wz4-Gh-zgt"/>
+                            </constraints>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="songCell" textLabel="FmG-to-lvH" detailTextLabel="p6b-Qf-nRS" rowHeight="55" style="IBUITableViewCellStyleValue1" id="1u4-w1-CZe">
-                                <rect key="frame" x="0.0" y="50" width="393" height="55"/>
+                                <rect key="frame" x="0.0" y="150" width="393" height="55"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1u4-w1-CZe" id="i7Q-Vb-Z3Q">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="55"/>

@@ -15,6 +15,7 @@ class SongListTableViewController: UITableViewController {
     }
 
     // MARK: - Properties
+    var song: Song?
     var album: Album?
     var songs: [Song] = []
     
@@ -26,7 +27,6 @@ class SongListTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "songCell", for: indexPath)
 
-        // Configure the cell...
 
         return cell
     }

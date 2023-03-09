@@ -20,6 +20,7 @@
 		AF561C6B29B5BA1D000EF400 /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF561C6A29B5BA1D000EF400 /* AlbumTableViewCell.swift */; };
 		AFDA41BF29B98A7F007AF208 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDA41BE29B98A7F007AF208 /* Song.swift */; };
 		AFDA41C129B99D18007AF208 /* SongListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDA41C029B99D18007AF208 /* SongListTableViewController.swift */; };
+		AFDA41C329B9B325007AF208 /* SongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDA41C229B9B325007AF208 /* SongTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		AF561C6A29B5BA1D000EF400 /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
 		AFDA41BE29B98A7F007AF208 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		AFDA41C029B99D18007AF208 /* SongListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongListTableViewController.swift; sourceTree = "<group>"; };
+		AFDA41C229B9B325007AF208 /* SongTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				AF561C6A29B5BA1D000EF400 /* AlbumTableViewCell.swift */,
+				AFDA41C229B9B325007AF208 /* SongTableViewCell.swift */,
 			);
 			path = "Custom Cells";
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 				AFDA41C129B99D18007AF208 /* SongListTableViewController.swift in Sources */,
 				AFDA41BF29B98A7F007AF208 /* Song.swift in Sources */,
 				AF561C4729B5A4A5000EF400 /* AppDelegate.swift in Sources */,
+				AFDA41C329B9B325007AF208 /* SongTableViewCell.swift in Sources */,
 				AF561C5D29B5A9E1000EF400 /* AlbumSearchTableViewController.swift in Sources */,
 				AF561C4929B5A4A5000EF400 /* SceneDelegate.swift in Sources */,
 				AF561C6829B5B6D4000EF400 /* NetworkingController.swift in Sources */,
