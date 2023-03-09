@@ -9,9 +9,13 @@ import UIKit
 
 class AlbumSearchTableViewController: UITableViewController {
 
+    // MARK: - Outlets
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        searchBar.delegate = self
     }
 
     // MARK: - Properties

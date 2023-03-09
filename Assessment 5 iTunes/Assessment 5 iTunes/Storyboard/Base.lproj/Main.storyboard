@@ -66,7 +66,7 @@
                                     <outlet property="albumCoverImageView" destination="IuH-0L-dZc" id="RpX-B8-4oK"/>
                                     <outlet property="albumNameLabel" destination="33j-tw-Rnn" id="aVJ-sQ-XHg"/>
                                     <outlet property="songsInAlbumLabel" destination="L8l-b8-uvo" id="dhQ-E6-dIK"/>
-                                    <segue destination="vPb-EY-6mr" kind="show" identifier="toSongListVC" trigger="accessoryAction" id="gzV-2t-8Qb"/>
+                                    <segue destination="vPb-EY-6mr" kind="show" identifier="toSongListVC" id="FU8-AD-o7b"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -76,6 +76,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="mwB-9R-pmg"/>
+                    <connections>
+                        <outlet property="searchBar" destination="XcR-fM-Pgb" id="FaL-nj-43M"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2h5-eU-865" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -133,29 +136,49 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="songCell" textLabel="FmG-to-lvH" detailTextLabel="p6b-Qf-nRS" rowHeight="55" style="IBUITableViewCellStyleValue1" id="1u4-w1-CZe">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="songCell" rowHeight="55" id="1u4-w1-CZe" customClass="SongTableViewCell" customModule="Assessment_5_iTunes" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="150" width="393" height="55"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1u4-w1-CZe" id="i7Q-Vb-Z3Q">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="55"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FmG-to-lvH">
-                                            <rect key="frame" x="19.999999999999996" y="16" width="37.666666666666664" height="24"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="p6b-Qf-nRS">
-                                            <rect key="frame" x="340.33333333333331" y="24" width="32.666666666666664" height="14.333333333333334"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vjr-UJ-POv">
+                                            <rect key="frame" x="0.0" y="5" width="393" height="45"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="300" verticalHuggingPriority="251" text="(song #)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Rk-dy-zn1">
+                                                    <rect key="frame" x="0.0" y="0.0" width="64.333333333333329" height="45"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="200" verticalHuggingPriority="251" text="(songName)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p5A-V4-cSc">
+                                                    <rect key="frame" x="72.333333333333314" y="0.0" width="210" height="45"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="(songLength)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G40-nL-9t6">
+                                                    <rect key="frame" x="290.33333333333331" y="0.0" width="102.66666666666669" height="45"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="vjr-UJ-POv" secondAttribute="trailing" id="KGK-O7-wD7"/>
+                                        <constraint firstAttribute="bottom" secondItem="vjr-UJ-POv" secondAttribute="bottom" constant="5" id="RXO-XI-kd5"/>
+                                        <constraint firstItem="vjr-UJ-POv" firstAttribute="top" secondItem="i7Q-Vb-Z3Q" secondAttribute="top" constant="5" id="mCp-6H-3lA"/>
+                                        <constraint firstItem="vjr-UJ-POv" firstAttribute="leading" secondItem="i7Q-Vb-Z3Q" secondAttribute="leading" id="uKH-pW-C0M"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="songLengthLabel" destination="G40-nL-9t6" id="poe-rm-0Oa"/>
+                                    <outlet property="songNameLabel" destination="p5A-V4-cSc" id="Us9-m9-Byh"/>
+                                    <outlet property="songNumberLabel" destination="0Rk-dy-zn1" id="q5E-0v-36r"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -164,6 +187,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="oH7-XI-shk"/>
+                    <connections>
+                        <outlet property="albumArtistLabel" destination="B8k-Xp-Mfx" id="11y-WN-psD"/>
+                        <outlet property="albumCoverImageView" destination="oGV-kL-DQM" id="PGx-rA-zOy"/>
+                        <outlet property="albumNameLabel" destination="cbR-aH-jMY" id="umE-iN-nT9"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KQb-g1-8e0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

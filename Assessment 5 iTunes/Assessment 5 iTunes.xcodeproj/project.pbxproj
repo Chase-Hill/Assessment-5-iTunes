@@ -21,6 +21,7 @@
 		AFDA41BF29B98A7F007AF208 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDA41BE29B98A7F007AF208 /* Song.swift */; };
 		AFDA41C129B99D18007AF208 /* SongListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDA41C029B99D18007AF208 /* SongListTableViewController.swift */; };
 		AFDA41C329B9B325007AF208 /* SongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDA41C229B9B325007AF208 /* SongTableViewCell.swift */; };
+		AFDA41C629B9B7C2007AF208 /* TimeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDA41C529B9B7C2007AF208 /* TimeExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		AFDA41BE29B98A7F007AF208 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		AFDA41C029B99D18007AF208 /* SongListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongListTableViewController.swift; sourceTree = "<group>"; };
 		AFDA41C229B9B325007AF208 /* SongTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongTableViewCell.swift; sourceTree = "<group>"; };
+		AFDA41C529B9B7C2007AF208 /* TimeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				AF561C5A29B5A4D9000EF400 /* Supporting Files */,
+				AFDA41C429B9B7A9007AF208 /* Helper Files */,
 				AF561C5B29B5A4E4000EF400 /* Storyboard */,
 				AF561C5E29B5A9E4000EF400 /* Controllers */,
 				AF561C6429B5B007000EF400 /* Models */,
@@ -87,8 +90,6 @@
 				AF561C4829B5A4A5000EF400 /* SceneDelegate.swift */,
 				AF561C4F29B5A4A6000EF400 /* Assets.xcassets */,
 				AF561C5429B5A4A6000EF400 /* Info.plist */,
-				AF561C6029B5AE4D000EF400 /* Constants.swift */,
-				AF561C6529B5B603000EF400 /* NetworkErrors.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -145,6 +146,16 @@
 				AFDA41C229B9B325007AF208 /* SongTableViewCell.swift */,
 			);
 			path = "Custom Cells";
+			sourceTree = "<group>";
+		};
+		AFDA41C429B9B7A9007AF208 /* Helper Files */ = {
+			isa = PBXGroup;
+			children = (
+				AF561C6029B5AE4D000EF400 /* Constants.swift */,
+				AF561C6529B5B603000EF400 /* NetworkErrors.swift */,
+				AFDA41C529B9B7C2007AF208 /* TimeExtension.swift */,
+			);
+			path = "Helper Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,6 +231,7 @@
 			files = (
 				AFDA41C129B99D18007AF208 /* SongListTableViewController.swift in Sources */,
 				AFDA41BF29B98A7F007AF208 /* Song.swift in Sources */,
+				AFDA41C629B9B7C2007AF208 /* TimeExtension.swift in Sources */,
 				AF561C4729B5A4A5000EF400 /* AppDelegate.swift in Sources */,
 				AFDA41C329B9B325007AF208 /* SongTableViewCell.swift in Sources */,
 				AF561C5D29B5A9E1000EF400 /* AlbumSearchTableViewController.swift in Sources */,

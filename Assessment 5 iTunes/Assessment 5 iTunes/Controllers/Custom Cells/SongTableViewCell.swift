@@ -8,13 +8,16 @@
 import UIKit
 
 class SongTableViewCell: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
+    
+    // MARK: - Outlets
+    @IBOutlet weak var songNumberLabel: UILabel!
+    @IBOutlet weak var songNameLabel: UILabel!
+    @IBOutlet weak var songLengthLabel: UILabel!
+    
+    // MARK: - Functions
+    func updateViews(with song: Song) {
+        songNumberLabel.text = "\(song.songNumber)."
+        songNameLabel.text = song.songName
+        songLengthLabel.text = Converter.millisecondsToMinutesAndSeconds(milliseconds: song.songLength)
     }
 }
