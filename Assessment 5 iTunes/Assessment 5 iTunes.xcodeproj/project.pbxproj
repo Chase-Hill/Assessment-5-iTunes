@@ -18,6 +18,7 @@
 		AF561C6629B5B603000EF400 /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF561C6529B5B603000EF400 /* NetworkErrors.swift */; };
 		AF561C6829B5B6D4000EF400 /* NetworkingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF561C6729B5B6D4000EF400 /* NetworkingController.swift */; };
 		AF561C6B29B5BA1D000EF400 /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF561C6A29B5BA1D000EF400 /* AlbumTableViewCell.swift */; };
+		AFDA41BF29B98A7F007AF208 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDA41BE29B98A7F007AF208 /* Song.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		AF561C6529B5B603000EF400 /* NetworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
 		AF561C6729B5B6D4000EF400 /* NetworkingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingController.swift; sourceTree = "<group>"; };
 		AF561C6A29B5BA1D000EF400 /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
+		AFDA41BE29B98A7F007AF208 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				AF561C6229B5B004000EF400 /* Album.swift */,
+				AFDA41BE29B98A7F007AF208 /* Song.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFDA41BF29B98A7F007AF208 /* Song.swift in Sources */,
 				AF561C4729B5A4A5000EF400 /* AppDelegate.swift in Sources */,
 				AF561C5D29B5A9E1000EF400 /* AlbumSearchTableViewController.swift in Sources */,
 				AF561C4929B5A4A5000EF400 /* SceneDelegate.swift in Sources */,

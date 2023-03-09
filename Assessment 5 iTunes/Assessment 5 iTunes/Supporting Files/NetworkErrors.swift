@@ -21,9 +21,9 @@ enum NetworkError: LocalizedError {
         case .thrownError(let error):
             return "Thrown Error: \(error.localizedDescription)"
         case .noData:
-            return "No Data Was Recieved From Network Fetch. Please Try Again Later."
+            return "No Data Was Recieved From Network Fetch. Check Data Again."
         case .unableToDecode:
-            return "Unable To Decode The Data From Network. Please Try Again Later."
+            return "Unable To Decode The Data From Network. Check Data Again."
         case .unknownError:
             return "An Unknown Error Has Occured. For Help, Please Call 867-5309 EXT: 69. Ask For Jenny."
         }

@@ -9,12 +9,14 @@ import UIKit
 
 struct AlbumService {
     
-    static func fetchAlbums(forTerm searchTerm: String, completion: @escaping (Result<TopLevel, NetworkError>) -> Void) {
+    static func fetchAlbums(forTerm searchTerm: String, completion: @escaping (Result <AlbumTopLevel, NetworkError>) -> Void) {
         
         guard let baseURL = URL(string: Constants.AlbumsURL.baseURL) else { completion(.failure(.invalidURL)) ; return }
         var urlComponents = URLComponents(url: baseURL, resolvingAgainstBaseURL: true)
-        let albumQuery = URLQueryItem(name: Constants.AlbumsURL.queryKey, value: searchTerm)
-        urlComponents?.queryItems = [albumQuery]
+        urlComponents?.path.append(contentsOf: Constants.AlbumsURL.searchPath)
+        let albumQuery1 = URLQueryItem(name: Constants.AlbumsURL.queryKey1, value: Constants.AlbumsURL.queryValue1)
+        let albumQuery2 = URLQueryItem(name: Constants.AlbumsURL.queryKey2, value: searchTerm)
+        urlComponents?.queryItems = [albumQuery1, albumQuery2]
         
         guard let finalURL = urlComponents?.url else { completion(.failure(.invalidURL)) ; return }
         print("Final Album URL: \(finalURL)")
@@ -33,7 +35,7 @@ struct AlbumService {
             
             do {
                 
-                let album = try JSONDecoder().decode(TopLevel.self, from: data)
+                let album = try JSONDecoder().decode(AlbumTopLevel.self, from: data)
                 completion(.success(album))
             } catch {
                 
@@ -42,7 +44,7 @@ struct AlbumService {
         } .resume()
     }
     
-    static func fetchAlbumCover(forAlbum album: Album, completion: @escaping (Result<UIImage, NetworkError>) -> Void) {
+    static func fetchAlbumCover(forAlbum album: Album, completion: @escaping (Result <UIImage, NetworkError>) -> Void) {
         
         guard let imageURL = URL(string: album.albumCover) else { completion(.failure(.invalidURL)) ; return }
         print("Final Image URL: \(imageURL)")

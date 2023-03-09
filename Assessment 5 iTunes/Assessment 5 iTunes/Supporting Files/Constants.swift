@@ -13,8 +13,11 @@ struct Constants {
     //https://itunes.apple.com/lookup?entity=song&id=(searchTermID)
     struct AlbumsURL {
         
-        static let baseURL = "https://itunes.apple.com/search?entity=album"
-        static let queryKey = "term"
+        static let baseURL = "https://itunes.apple.com/"
+        static let searchPath = "search"
+        static let queryKey1 = "entity"
+        static let queryValue1 = "album"
+        static let queryKey2 = "term"
     }
     
     struct SongsURL {

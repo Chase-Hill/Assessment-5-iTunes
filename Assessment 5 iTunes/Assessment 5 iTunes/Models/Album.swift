@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct TopLevel: Decodable {
+struct AlbumTopLevel: Decodable {
     private enum CodingKeys: String, CodingKey {
         case results
     }
@@ -21,11 +21,9 @@ struct Album: Decodable {
         case albumName = "collectionName"
         case albumCover = "artworkUrl100"
         case songCount = "trackCount"
-        case advisoryRating = "contentAdvisoryRating"
     }
     
     let albumName: String
     let albumCover: String
     let songCount: Int
-    let advisoryRating: String
 }
