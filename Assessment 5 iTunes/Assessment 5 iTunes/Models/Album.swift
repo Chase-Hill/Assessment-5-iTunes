@@ -21,9 +21,11 @@ struct Album: Decodable {
         case albumName = "collectionName"
         case albumCover = "artworkUrl100"
         case songCount = "trackCount"
+        case artistName
     }
     
     let albumName: String
     let albumCover: String
     let songCount: Int
+    let artistName: String
 }

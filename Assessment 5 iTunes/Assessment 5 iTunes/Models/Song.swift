@@ -9,21 +9,19 @@ import Foundation
 
 struct SongTopLevel: Decodable {
     
-    let results: [Song]
+    var results: [Song]
 }
 
 struct Song: Decodable {
     private enum CodingKeys: String, CodingKey {
-        case songName           = "trackName"
-        case songNumber         = "trackNumber"
-        case songLength         = "trackTimeMillis"
-        case songArtistName     = "artistName"
-        case songFromAlbumName  = "collectionName"
+        case songName = "trackName"
+        case songNumber = "trackNumber"
+        case songLength = "trackTimeMillis"
+        case songFromAlbumName = "collectionName"
     }
     
     let songName: String
     let songNumber: Int
     let songLength: Int
-    let songArtistName: String
     let songFromAlbumName: String
 }

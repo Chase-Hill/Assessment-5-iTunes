@@ -75,8 +75,8 @@
 			isa = PBXGroup;
 			children = (
 				AF561C5A29B5A4D9000EF400 /* Supporting Files */,
-				AFDA41C429B9B7A9007AF208 /* Helper Files */,
 				AF561C5B29B5A4E4000EF400 /* Storyboard */,
+				AFDA41C429B9B7A9007AF208 /* Helper Files */,
 				AF561C5E29B5A9E4000EF400 /* Controllers */,
 				AF561C6429B5B007000EF400 /* Models */,
 			);
@@ -106,8 +106,8 @@
 		AF561C5E29B5A9E4000EF400 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				AF561C5F29B5A9E9000EF400 /* View */,
 				AF561C6929B5B9FB000EF400 /* Networking */,
+				AF561C5F29B5A9E9000EF400 /* View */,
 				AF561C6C29B5BA21000EF400 /* Custom Cells */,
 			);
 			path = Controllers;

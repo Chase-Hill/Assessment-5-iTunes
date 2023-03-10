@@ -21,17 +21,22 @@ class SongListTableViewController: UITableViewController {
     }
 
     // MARK: - Properties
-    var song: Song?
-    var album: Album?
     var songs: [Song] = []
+    var album: Album?
     
     // MARK: - Functions
     func updateViews() {
         guard let album = album else { return }
-        guard let song = song else { return }
-        albumNameLabel.text = album.albumName
-        albumArtistLabel.text = song.songArtistName
-        
+        DispatchQueue.main.async {
+            self.albumNameLabel.text = album.albumName
+            self.albumArtistLabel.text = album.artistName
+        }
+        fetchAlbumCover()
+        fetchSongs()
+    }
+    
+    func fetchAlbumCover() {
+        guard let album = album else { return }
         AlbumService.fetchAlbumCover(forAlbum: album) { [weak self] result in
             switch result {
             case .success(let albumCover):
@@ -42,7 +47,10 @@ class SongListTableViewController: UITableViewController {
                 print(error.errorDescription ?? NetworkError.unknownError)
             }
         }
-        
+    }
+    
+    func fetchSongs() {
+        guard let album = album else { return }
         AlbumService.fetchSongsFromAlbum(fromAlbum: album) { [weak self] result in
             switch result {
             case .success(let songs):
@@ -64,8 +72,12 @@ class SongListTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "songCell", for: indexPath) as? SongTableViewCell else { return UITableViewCell() }
         
-        let song = songs[indexPath.row]
-        cell.updateViews(with: song)
+        let songsInOrder = songs.sorted {
+            $0.songNumber < $1.songNumber
+        }
+        
+        let songs = songsInOrder[indexPath.row]
+        cell.updateViews(with: songs)
 
         return cell
     }

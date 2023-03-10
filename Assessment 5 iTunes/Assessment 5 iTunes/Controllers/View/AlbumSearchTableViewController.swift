@@ -48,10 +48,10 @@ class AlbumSearchTableViewController: UITableViewController {
 }
 
 extension AlbumSearchTableViewController: UISearchBarDelegate {
-    
+
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let searchTerm = searchBar.text, !searchTerm.isEmpty else { return }
-        
+
         AlbumService.fetchAlbums(forTerm: searchTerm) { [weak self] result in
             switch result {
             case .success(let topLevel):
@@ -60,9 +60,9 @@ extension AlbumSearchTableViewController: UISearchBarDelegate {
                 DispatchQueue.main.async {
                     self?.tableView.reloadData()
                 }
-                
+
             case .failure(let error):
-                
+
                 print(error.errorDescription ?? NetworkError.unknownError)
             }
         }
