@@ -70,7 +70,7 @@ class AlbumService {
         var urlComponents = URLComponents(url: baseURL, resolvingAgainstBaseURL: true)
         urlComponents?.path.append(contentsOf: Constants.SongsURL.searchPath)
         let songQuery1 = URLQueryItem(name: Constants.SongsURL.queryKey1, value: Constants.SongsURL.queryValue1)
-        let songQuery2 = URLQueryItem(name: Constants.SongsURL.queryKey2, value: album.albumName)
+        let songQuery2 = URLQueryItem(name: Constants.SongsURL.queryKey2, value: String(album.albumID))
         urlComponents?.queryItems = [songQuery1, songQuery2]
         
         guard let finalURL = urlComponents?.url else { completion(.failure(.invalidURL)) ; return }

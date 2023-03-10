@@ -21,6 +21,6 @@ class SongTableViewCell: UITableViewCell {
     
     func updateViews(with song: Song) {
         songNameLabel.text = song.songName
-        songLengthLabel.text = Converter.millisecondsToMinutesAndSeconds(milliseconds: song.songLength)
+        songLengthLabel.text = Converter.millisecondsToMinutesAndSeconds(milliseconds: song.songLength ?? 0)
     }
 }

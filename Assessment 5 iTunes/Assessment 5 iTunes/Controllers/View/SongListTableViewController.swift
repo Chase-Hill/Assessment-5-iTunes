@@ -53,9 +53,12 @@ class SongListTableViewController: UITableViewController {
         guard let album = album else { return }
         AlbumService.fetchSongsFromAlbum(fromAlbum: album) { [weak self] result in
             switch result {
-            case .success(let songs):
+            case .success(var songs):
+                songs.removeFirst()
                 self?.songs = songs
+                
                 DispatchQueue.main.async {
+                    
                     self?.tableView.reloadData()
                 }
             case .failure(let error):
@@ -65,17 +68,22 @@ class SongListTableViewController: UITableViewController {
     }
     
     // MARK: - Table view data source
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 55
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return songs.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "songCell", for: indexPath) as? SongTableViewCell else { return UITableViewCell() }
-        
+                
         let songs = songs[indexPath.row]
         cell.updateViews(with: songs)
         cell.configureSongNumber(for: indexPath.row)
-
+        
+        
         return cell
     }
 }

@@ -17,11 +17,9 @@ struct Song: Decodable {
         case songName = "trackName"
         case songNumber = "trackNumber"
         case songLength = "trackTimeMillis"
-        case songFromAlbumName = "collectionName"
     }
     
-    let songName: String
-    let songNumber: Int
-    let songLength: Int
-    let songFromAlbumName: String
+    let songName: String?
+    let songNumber: Int?
+    let songLength: Int?
 }

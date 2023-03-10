@@ -99,12 +99,6 @@
                             <rect key="frame" x="0.0" y="0.0" width="393" height="80"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iTunesPlaceHolder" translatesAutoresizingMaskIntoConstraints="NO" id="oGV-kL-DQM">
-                                    <rect key="frame" x="154.66666666666666" y="8" width="84" height="67.333333333333329"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" secondItem="oGV-kL-DQM" secondAttribute="height" multiplier="1:1" id="VlA-ou-HtS"/>
-                                    </constraints>
-                                </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Album Name)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cbR-aH-jMY">
                                     <rect key="frame" x="246.66666666666663" y="8" width="138.33333333333337" height="64"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -117,6 +111,12 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iTunesPlaceHolder" translatesAutoresizingMaskIntoConstraints="NO" id="oGV-kL-DQM">
+                                    <rect key="frame" x="154.66666666666666" y="8" width="84" height="67.333333333333329"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="oGV-kL-DQM" secondAttribute="height" multiplier="1:1" id="VlA-ou-HtS"/>
+                                    </constraints>
+                                </imageView>
                             </subviews>
                             <color key="backgroundColor" red="0.93410116430000001" green="0.37444135550000002" blue="0.36184051630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
@@ -140,35 +140,42 @@
                             <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="songCell" rowHeight="55" id="1u4-w1-CZe" customClass="SongTableViewCell" customModule="Assessment_5_iTunes" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="130" width="393" height="55"/>
+                            <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="songCell" rowHeight="69" id="1u4-w1-CZe" customClass="SongTableViewCell" customModule="Assessment_5_iTunes" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="130" width="393" height="69"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1u4-w1-CZe" id="i7Q-Vb-Z3Q">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="55"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="69"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="vjr-UJ-POv">
-                                            <rect key="frame" x="0.0" y="2" width="393" height="51"/>
+                                            <rect key="frame" x="0.0" y="2" width="393" height="65"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="300" verticalHuggingPriority="251" text="(song #)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Rk-dy-zn1">
-                                                    <rect key="frame" x="0.0" y="0.0" width="64.333333333333329" height="51"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="64.333333333333329" height="65"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="200" verticalHuggingPriority="251" text="(songName)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p5A-V4-cSc">
-                                                    <rect key="frame" x="79.333333333333329" y="0.0" width="180.33333333333337" height="51"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="255" verticalHuggingPriority="251" text="(songName)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p5A-V4-cSc">
+                                                    <rect key="frame" x="79.333333333333314" y="0.0" width="109" height="65"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="(songLength)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G40-nL-9t6">
-                                                    <rect key="frame" x="274.66666666666669" y="0.0" width="118.33333333333331" height="51"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="(songLength)" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G40-nL-9t6">
+                                                    <rect key="frame" x="203.33333333333337" y="0.0" width="189.66666666666663" height="65"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="0Rk-dy-zn1" firstAttribute="top" secondItem="vjr-UJ-POv" secondAttribute="top" id="Kly-k7-iBt"/>
+                                                <constraint firstAttribute="bottom" secondItem="p5A-V4-cSc" secondAttribute="bottom" id="ehU-jJ-mZp"/>
+                                                <constraint firstAttribute="trailing" secondItem="G40-nL-9t6" secondAttribute="trailing" id="m45-s6-sjN"/>
+                                                <constraint firstItem="p5A-V4-cSc" firstAttribute="top" secondItem="vjr-UJ-POv" secondAttribute="top" id="sNh-yV-rMr"/>
+                                                <constraint firstAttribute="bottom" secondItem="0Rk-dy-zn1" secondAttribute="bottom" id="zoF-nQ-UBn"/>
+                                            </constraints>
                                         </stackView>
                                     </subviews>
                                     <constraints>
