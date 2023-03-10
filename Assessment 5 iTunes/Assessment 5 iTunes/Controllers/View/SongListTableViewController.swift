@@ -72,12 +72,9 @@ class SongListTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "songCell", for: indexPath) as? SongTableViewCell else { return UITableViewCell() }
         
-        let songsInOrder = songs.sorted {
-            $0.songNumber < $1.songNumber
-        }
-        
-        let songs = songsInOrder[indexPath.row]
+        let songs = songs[indexPath.row]
         cell.updateViews(with: songs)
+        cell.configureSongNumber(for: indexPath.row)
 
         return cell
     }

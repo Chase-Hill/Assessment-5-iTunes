@@ -13,6 +13,6 @@ struct Converter {
         let totalSeconds = milliseconds / 1000
         let minutes = totalSeconds / 60
         let remainingSeconds = totalSeconds % 60
-        return ("\(minutes):\(remainingSeconds)")
+        return "\(minutes) : " + String(format: "%02d", remainingSeconds) // %02d should print with at least 2 characters and have a leading zero if necessary
     }
 }

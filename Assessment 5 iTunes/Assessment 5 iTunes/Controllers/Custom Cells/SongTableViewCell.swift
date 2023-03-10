@@ -15,8 +15,11 @@ class SongTableViewCell: UITableViewCell {
     @IBOutlet weak var songLengthLabel: UILabel!
     
     // MARK: - Functions
+    func configureSongNumber(for songIndex: Int) {
+        songNumberLabel.text = "\(songIndex + 1)."
+    }
+    
     func updateViews(with song: Song) {
-        songNumberLabel.text = "\(song.songNumber)."
         songNameLabel.text = song.songName
         songLengthLabel.text = Converter.millisecondsToMinutesAndSeconds(milliseconds: song.songLength)
     }
